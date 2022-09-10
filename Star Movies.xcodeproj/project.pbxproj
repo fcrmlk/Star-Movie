@@ -11,6 +11,7 @@
 		180BEDBE28CD15910065D238 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180BEDBC28CD15910065D238 /* HomeViewController.xib */; };
 		180BEDC328CD16870065D238 /* NoNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180BEDC128CD16870065D238 /* NoNetworkViewController.xib */; };
 		180BEDC428CD16870065D238 /* NoNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BEDC228CD16870065D238 /* NoNetworkViewController.swift */; };
+		180D563E28CD27A300D703A5 /* Star_Movies_Api_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D563D28CD27A300D703A5 /* Star_Movies_Api_Tests.swift */; };
 		181079D528CCE3A8000C58A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181079D428CCE3A8000C58A1 /* AppDelegate.swift */; };
 		181079E128CCE3A9000C58A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181079E028CCE3A9000C58A1 /* Assets.xcassets */; };
 		181079E428CCE3A9000C58A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181079E228CCE3A9000C58A1 /* LaunchScreen.storyboard */; };
@@ -55,6 +56,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		180D563F28CD27A300D703A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 181079C928CCE3A8000C58A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 181079D028CCE3A8000C58A1;
+			remoteInfo = "Star Movies";
+		};
 		1893F53D28CD205D0075A1F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 181079C928CCE3A8000C58A1 /* Project object */;
@@ -83,6 +91,8 @@
 		180BEDBC28CD15910065D238 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		180BEDC128CD16870065D238 /* NoNetworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoNetworkViewController.xib; sourceTree = "<group>"; };
 		180BEDC228CD16870065D238 /* NoNetworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoNetworkViewController.swift; sourceTree = "<group>"; };
+		180D563B28CD27A300D703A5 /* Star Movies Api Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Star Movies Api Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		180D563D28CD27A300D703A5 /* Star_Movies_Api_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star_Movies_Api_Tests.swift; sourceTree = "<group>"; };
 		181079D128CCE3A8000C58A1 /* Star Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Star Movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		181079D428CCE3A8000C58A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		181079E028CCE3A9000C58A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,6 +140,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		180D563828CD27A300D703A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		181079CE28CCE3A8000C58A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,11 +204,20 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		180D563C28CD27A300D703A5 /* Star Movies Api Tests */ = {
+			isa = PBXGroup;
+			children = (
+				180D563D28CD27A300D703A5 /* Star_Movies_Api_Tests.swift */,
+			);
+			path = "Star Movies Api Tests";
+			sourceTree = "<group>";
+		};
 		181079C828CCE3A8000C58A1 = {
 			isa = PBXGroup;
 			children = (
 				181079D328CCE3A8000C58A1 /* Star Movies */,
 				1893F53A28CD205D0075A1F4 /* StreamingKit */,
+				180D563C28CD27A300D703A5 /* Star Movies Api Tests */,
 				181079D228CCE3A8000C58A1 /* Products */,
 				8B5D792B771BAF2999BEE6B1 /* Pods */,
 				77B58108A2F054C303E0844E /* Frameworks */,
@@ -203,6 +229,7 @@
 			children = (
 				181079D128CCE3A8000C58A1 /* Star Movies.app */,
 				1893F53928CD205D0075A1F4 /* StreamingKit.framework */,
+				180D563B28CD27A300D703A5 /* Star Movies Api Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,6 +364,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		180D563A28CD27A300D703A5 /* Star Movies Api Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 180D564328CD27A300D703A5 /* Build configuration list for PBXNativeTarget "Star Movies Api Tests" */;
+			buildPhases = (
+				180D563728CD27A300D703A5 /* Sources */,
+				180D563828CD27A300D703A5 /* Frameworks */,
+				180D563928CD27A300D703A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				180D564028CD27A300D703A5 /* PBXTargetDependency */,
+			);
+			name = "Star Movies Api Tests";
+			productName = "Star Movies Api Tests";
+			productReference = 180D563B28CD27A300D703A5 /* Star Movies Api Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		181079D028CCE3A8000C58A1 /* Star Movies */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 181079E828CCE3A9000C58A1 /* Build configuration list for PBXNativeTarget "Star Movies" */;
@@ -386,6 +431,10 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					180D563A28CD27A300D703A5 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 181079D028CCE3A8000C58A1;
+					};
 					181079D028CCE3A8000C58A1 = {
 						CreatedOnToolsVersion = 13.4;
 					};
@@ -410,11 +459,19 @@
 			targets = (
 				181079D028CCE3A8000C58A1 /* Star Movies */,
 				1893F53828CD205D0075A1F4 /* StreamingKit */,
+				180D563A28CD27A300D703A5 /* Star Movies Api Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		180D563928CD27A300D703A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		181079CF28CCE3A8000C58A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -478,6 +535,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		180D563728CD27A300D703A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180D563E28CD27A300D703A5 /* Star_Movies_Api_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		181079CD28CCE3A8000C58A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -532,6 +597,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		180D564028CD27A300D703A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 181079D028CCE3A8000C58A1 /* Star Movies */;
+			targetProxy = 180D563F28CD27A300D703A5 /* PBXContainerItemProxy */;
+		};
 		1893F53E28CD205D0075A1F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1893F53828CD205D0075A1F4 /* StreamingKit */;
@@ -551,6 +621,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		180D564128CD27A300D703A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XY338TPK8F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.standAlone.Star-Movies-Api-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Star Movies.app/Star Movies";
+			};
+			name = Debug;
+		};
+		180D564228CD27A300D703A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XY338TPK8F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.standAlone.Star-Movies-Api-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Star Movies.app/Star Movies";
+			};
+			name = Release;
+		};
 		181079E628CCE3A9000C58A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -795,6 +901,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		180D564328CD27A300D703A5 /* Build configuration list for PBXNativeTarget "Star Movies Api Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				180D564128CD27A300D703A5 /* Debug */,
+				180D564228CD27A300D703A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		181079CC28CCE3A8000C58A1 /* Build configuration list for PBXProject "Star Movies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
