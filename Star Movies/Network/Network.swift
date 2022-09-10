@@ -30,6 +30,7 @@ struct ApiRoutes {
     static let baseUrl = "https://api.themoviedb.org/3/tv/"
     static let imageBaseUrl = "https://image.tmdb.org/t/p/w500"
     static let apiKeyWithParams = "?api_key=ecef14eac236a5d4ec6ac3a4a4761e8f&language=en-US"
+    static let sampleVideo = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
 }
 
 
