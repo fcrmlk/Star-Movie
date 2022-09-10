@@ -36,8 +36,11 @@
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZC-zS-80F" userLabel="Preview">
                             <rect key="frame" x="0.0" y="30" width="414" height="200"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="COVER" translatesAutoresizingMaskIntoConstraints="NO" id="H7p-sq-4xp">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="COVER" translatesAutoresizingMaskIntoConstraints="NO" id="H7p-sq-4xp">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="FFC-nR-yNm"/>
+                                    </constraints>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -138,21 +141,29 @@
                             </constraints>
                         </stackView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="C8y-Nr-hWy">
-                            <rect key="frame" x="0.0" y="505" width="414" height="357"/>
+                            <rect key="frame" x="0.0" y="495" width="414" height="367"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="27g-oZ-E1V"/>
+                                <outlet property="delegate" destination="-1" id="mLd-UP-ZBU"/>
+                            </connections>
                         </tableView>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="8K5-at-pDW">
-                            <rect key="frame" x="0.0" y="445" width="414" height="60"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="8K5-at-pDW">
+                            <rect key="frame" x="0.0" y="445" width="414" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="e4A-h7-OSm"/>
+                                <constraint firstAttribute="height" constant="50" id="e4A-h7-OSm"/>
                             </constraints>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OYM-R2-hdM">
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="OYM-R2-hdM">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="Q0d-o2-17d"/>
+                                <outlet property="delegate" destination="-1" id="wz0-Ky-sDn"/>
+                            </connections>
                         </collectionView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egf-e0-RDJ">
                             <rect key="frame" x="20" y="355" width="195" height="60"/>

@@ -11,6 +11,10 @@
 		180BEDBE28CD15910065D238 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180BEDBC28CD15910065D238 /* HomeViewController.xib */; };
 		180BEDC328CD16870065D238 /* NoNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180BEDC128CD16870065D238 /* NoNetworkViewController.xib */; };
 		180BEDC428CD16870065D238 /* NoNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BEDC228CD16870065D238 /* NoNetworkViewController.swift */; };
+		180C2E3728CD424300CFCE96 /* EpisodesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C2E3528CD424300CFCE96 /* EpisodesTableViewCell.swift */; };
+		180C2E3828CD424300CFCE96 /* EpisodesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C2E3628CD424300CFCE96 /* EpisodesTableViewCell.xib */; };
+		180C2E3C28CD426000CFCE96 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C2E3A28CD426000CFCE96 /* TitleCollectionViewCell.swift */; };
+		180C2E3D28CD426000CFCE96 /* TitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C2E3B28CD426000CFCE96 /* TitleCollectionViewCell.xib */; };
 		180D563E28CD27A300D703A5 /* Star_Movies_Api_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D563D28CD27A300D703A5 /* Star_Movies_Api_Tests.swift */; };
 		180D564728CD3D9C00D703A5 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D564528CD3D9C00D703A5 /* PlayerViewController.swift */; };
 		180D564828CD3D9C00D703A5 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180D564628CD3D9C00D703A5 /* PlayerViewController.xib */; };
@@ -93,6 +97,10 @@
 		180BEDBC28CD15910065D238 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		180BEDC128CD16870065D238 /* NoNetworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoNetworkViewController.xib; sourceTree = "<group>"; };
 		180BEDC228CD16870065D238 /* NoNetworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoNetworkViewController.swift; sourceTree = "<group>"; };
+		180C2E3528CD424300CFCE96 /* EpisodesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewCell.swift; sourceTree = "<group>"; };
+		180C2E3628CD424300CFCE96 /* EpisodesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodesTableViewCell.xib; sourceTree = "<group>"; };
+		180C2E3A28CD426000CFCE96 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		180C2E3B28CD426000CFCE96 /* TitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		180D563B28CD27A300D703A5 /* Star Movies Api Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Star Movies Api Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180D563D28CD27A300D703A5 /* Star_Movies_Api_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star_Movies_Api_Tests.swift; sourceTree = "<group>"; };
 		180D564528CD3D9C00D703A5 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
@@ -203,10 +211,22 @@
 		180BEDC528CD16890065D238 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				180C2E3428CD422600CFCE96 /* Views */,
 				180BEDBB28CD15910065D238 /* HomeViewController.swift */,
 				180BEDBC28CD15910065D238 /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		180C2E3428CD422600CFCE96 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				180C2E3528CD424300CFCE96 /* EpisodesTableViewCell.swift */,
+				180C2E3628CD424300CFCE96 /* EpisodesTableViewCell.xib */,
+				180C2E3A28CD426000CFCE96 /* TitleCollectionViewCell.swift */,
+				180C2E3B28CD426000CFCE96 /* TitleCollectionViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		180D563C28CD27A300D703A5 /* Star Movies Api Tests */ = {
@@ -491,9 +511,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				181079E428CCE3A9000C58A1 /* LaunchScreen.storyboard in Resources */,
+				180C2E3828CD424300CFCE96 /* EpisodesTableViewCell.xib in Resources */,
 				180D564828CD3D9C00D703A5 /* PlayerViewController.xib in Resources */,
 				181079E128CCE3A9000C58A1 /* Assets.xcassets in Resources */,
 				180BEDC328CD16870065D238 /* NoNetworkViewController.xib in Resources */,
+				180C2E3D28CD426000CFCE96 /* TitleCollectionViewCell.xib in Resources */,
 				180BEDBE28CD15910065D238 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +595,7 @@
 				180BEDC428CD16870065D238 /* NoNetworkViewController.swift in Sources */,
 				18107A5E28CD123A000C58A1 /* BaseViewController.swift in Sources */,
 				18107A6728CD1264000C58A1 /* DataManager.swift in Sources */,
+				180C2E3728CD424300CFCE96 /* EpisodesTableViewCell.swift in Sources */,
 				18107A6C28CD1285000C58A1 /* ConnectionManager.swift in Sources */,
 				181079D528CCE3A8000C58A1 /* AppDelegate.swift in Sources */,
 				18107A4028CD122C000C58A1 /* UIView.swift in Sources */,
@@ -588,6 +611,7 @@
 				18107A4628CD122C000C58A1 /* UIDevice.swift in Sources */,
 				18107A5B28CD123A000C58A1 /* GCD.swift in Sources */,
 				18107A5128CD122C000C58A1 /* UIColorExtensions.swift in Sources */,
+				180C2E3C28CD426000CFCE96 /* TitleCollectionViewCell.swift in Sources */,
 				18107A4728CD122C000C58A1 /* UITextField.swift in Sources */,
 				18107A5028CD122C000C58A1 /* UINavigationController.swift in Sources */,
 				18107A4428CD122C000C58A1 /* Int.swift in Sources */,

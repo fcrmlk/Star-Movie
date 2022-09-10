@@ -74,6 +74,7 @@ struct Season: Codable {
     let episodeCount, id: Int?
     let name, overview: String?
     let seasonNumber: Int?
+    let posterPath: String?
 }
 
 // MARK: - SpokenLanguage
