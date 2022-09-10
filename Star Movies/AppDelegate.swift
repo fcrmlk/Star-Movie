@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UISceneDelegate {
         IQKeyboardManager.shared.placeholderColor = .white
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         let nav = UINavigationController()
+        nav.navigationBar.isHidden = true
         nav.viewControllers = [HomeViewController()]
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = nav

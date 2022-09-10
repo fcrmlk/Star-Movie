@@ -12,6 +12,8 @@
 		180BEDC328CD16870065D238 /* NoNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180BEDC128CD16870065D238 /* NoNetworkViewController.xib */; };
 		180BEDC428CD16870065D238 /* NoNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BEDC228CD16870065D238 /* NoNetworkViewController.swift */; };
 		180D563E28CD27A300D703A5 /* Star_Movies_Api_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D563D28CD27A300D703A5 /* Star_Movies_Api_Tests.swift */; };
+		180D564728CD3D9C00D703A5 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D564528CD3D9C00D703A5 /* PlayerViewController.swift */; };
+		180D564828CD3D9C00D703A5 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180D564628CD3D9C00D703A5 /* PlayerViewController.xib */; };
 		181079D528CCE3A8000C58A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181079D428CCE3A8000C58A1 /* AppDelegate.swift */; };
 		181079E128CCE3A9000C58A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181079E028CCE3A9000C58A1 /* Assets.xcassets */; };
 		181079E428CCE3A9000C58A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181079E228CCE3A9000C58A1 /* LaunchScreen.storyboard */; };
@@ -49,8 +51,8 @@
 		18107A6D28CD1285000C58A1 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18107A6A28CD1285000C58A1 /* Utility.swift */; };
 		18107A6E28CD1285000C58A1 /* ImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18107A6B28CD1285000C58A1 /* ImagePickerVC.swift */; };
 		1893F53C28CD205D0075A1F4 /* StreamingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1893F53B28CD205D0075A1F4 /* StreamingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1893F53F28CD205D0075A1F4 /* StreamingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1893F53928CD205D0075A1F4 /* StreamingKit.framework */; };
-		1893F54028CD205D0075A1F4 /* StreamingKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1893F53928CD205D0075A1F4 /* StreamingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1893F53F28CD205D0075A1F4 /* Stream_Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1893F53928CD205D0075A1F4 /* Stream_Kit.framework */; };
+		1893F54028CD205D0075A1F4 /* Stream_Kit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1893F53928CD205D0075A1F4 /* Stream_Kit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1893F54628CD206B0075A1F4 /* StreamingVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893F54528CD206B0075A1F4 /* StreamingVideoPlayer.swift */; };
 		799928422C347500516EF325 /* Pods_Star_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1314A443978628F7D7D9A4 /* Pods_Star_Movies.framework */; };
 /* End PBXBuildFile section */
@@ -79,7 +81,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1893F54028CD205D0075A1F4 /* StreamingKit.framework in Embed Frameworks */,
+				1893F54028CD205D0075A1F4 /* Stream_Kit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +95,8 @@
 		180BEDC228CD16870065D238 /* NoNetworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoNetworkViewController.swift; sourceTree = "<group>"; };
 		180D563B28CD27A300D703A5 /* Star Movies Api Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Star Movies Api Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180D563D28CD27A300D703A5 /* Star_Movies_Api_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star_Movies_Api_Tests.swift; sourceTree = "<group>"; };
+		180D564528CD3D9C00D703A5 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		180D564628CD3D9C00D703A5 /* PlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
 		181079D128CCE3A8000C58A1 /* Star Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Star Movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		181079D428CCE3A8000C58A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		181079E028CCE3A9000C58A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,7 +135,7 @@
 		18107A6928CD1285000C58A1 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		18107A6A28CD1285000C58A1 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		18107A6B28CD1285000C58A1 /* ImagePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerVC.swift; sourceTree = "<group>"; };
-		1893F53928CD205D0075A1F4 /* StreamingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StreamingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1893F53928CD205D0075A1F4 /* Stream_Kit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stream_Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1893F53B28CD205D0075A1F4 /* StreamingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StreamingKit.h; sourceTree = "<group>"; };
 		1893F54528CD206B0075A1F4 /* StreamingVideoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingVideoPlayer.swift; sourceTree = "<group>"; };
 		8E2AE6B6AA149DE91FBC9961 /* Pods-Star Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Star Movies.release.xcconfig"; path = "Target Support Files/Pods-Star Movies/Pods-Star Movies.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1893F53F28CD205D0075A1F4 /* StreamingKit.framework in Frameworks */,
+				1893F53F28CD205D0075A1F4 /* Stream_Kit.framework in Frameworks */,
 				799928422C347500516EF325 /* Pods_Star_Movies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +184,7 @@
 		180BEDBF28CD15A70065D238 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				180D564428CD3D8F00D703A5 /* Player */,
 				180BEDC528CD16890065D238 /* Home */,
 				180BEDC028CD16870065D238 /* Network */,
 			);
@@ -212,6 +217,15 @@
 			path = "Star Movies Api Tests";
 			sourceTree = "<group>";
 		};
+		180D564428CD3D8F00D703A5 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				180D564528CD3D9C00D703A5 /* PlayerViewController.swift */,
+				180D564628CD3D9C00D703A5 /* PlayerViewController.xib */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		181079C828CCE3A8000C58A1 = {
 			isa = PBXGroup;
 			children = (
@@ -228,7 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				181079D128CCE3A8000C58A1 /* Star Movies.app */,
-				1893F53928CD205D0075A1F4 /* StreamingKit.framework */,
+				1893F53928CD205D0075A1F4 /* Stream_Kit.framework */,
 				180D563B28CD27A300D703A5 /* Star Movies Api Tests.xctest */,
 			);
 			name = Products;
@@ -403,9 +417,9 @@
 			productReference = 181079D128CCE3A8000C58A1 /* Star Movies.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1893F53828CD205D0075A1F4 /* StreamingKit */ = {
+		1893F53828CD205D0075A1F4 /* Stream Kit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1893F54428CD205D0075A1F4 /* Build configuration list for PBXNativeTarget "StreamingKit" */;
+			buildConfigurationList = 1893F54428CD205D0075A1F4 /* Build configuration list for PBXNativeTarget "Stream Kit" */;
 			buildPhases = (
 				1893F53428CD205D0075A1F4 /* Headers */,
 				1893F53528CD205D0075A1F4 /* Sources */,
@@ -416,9 +430,9 @@
 			);
 			dependencies = (
 			);
-			name = StreamingKit;
+			name = "Stream Kit";
 			productName = StreamingKit;
-			productReference = 1893F53928CD205D0075A1F4 /* StreamingKit.framework */;
+			productReference = 1893F53928CD205D0075A1F4 /* Stream_Kit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -458,7 +472,7 @@
 			projectRoot = "";
 			targets = (
 				181079D028CCE3A8000C58A1 /* Star Movies */,
-				1893F53828CD205D0075A1F4 /* StreamingKit */,
+				1893F53828CD205D0075A1F4 /* Stream Kit */,
 				180D563A28CD27A300D703A5 /* Star Movies Api Tests */,
 			);
 		};
@@ -477,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				181079E428CCE3A9000C58A1 /* LaunchScreen.storyboard in Resources */,
+				180D564828CD3D9C00D703A5 /* PlayerViewController.xib in Resources */,
 				181079E128CCE3A9000C58A1 /* Assets.xcassets in Resources */,
 				180BEDC328CD16870065D238 /* NoNetworkViewController.xib in Resources */,
 				180BEDBE28CD15910065D238 /* HomeViewController.xib in Resources */,
@@ -552,6 +567,7 @@
 				180BEDBD28CD15910065D238 /* HomeViewController.swift in Sources */,
 				181079F328CCFC7E000C58A1 /* Network.swift in Sources */,
 				18107A4928CD122C000C58A1 /* UIButton.swift in Sources */,
+				180D564728CD3D9C00D703A5 /* PlayerViewController.swift in Sources */,
 				18107A5F28CD123A000C58A1 /* BaseTableViewCell.swift in Sources */,
 				18107A6228CD123A000C58A1 /* SJCenterFlowLayout.swift in Sources */,
 				180BEDC428CD16870065D238 /* NoNetworkViewController.swift in Sources */,
@@ -604,7 +620,7 @@
 		};
 		1893F53E28CD205D0075A1F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1893F53828CD205D0075A1F4 /* StreamingKit */;
+			target = 1893F53828CD205D0075A1F4 /* Stream Kit */;
 			targetProxy = 1893F53D28CD205D0075A1F4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -928,7 +944,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1893F54428CD205D0075A1F4 /* Build configuration list for PBXNativeTarget "StreamingKit" */ = {
+		1893F54428CD205D0075A1F4 /* Build configuration list for PBXNativeTarget "Stream Kit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1893F54228CD205D0075A1F4 /* Debug */,

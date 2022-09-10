@@ -6,21 +6,48 @@
 //
 
 import UIKit
-import StreamingKit
-import AVFoundation
-import AVKit
 
 class HomeViewController: BaseViewController {
-    private let videoPlayer = StreamingVideoPlayer()
+    
+    
+    //MARK: - IBOutlets
+
+    @IBOutlet weak var coverImg: UIImageView!
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var yearLbl: UILabel!
+    @IBOutlet weak var sesoneLbl: UILabel!
+    @IBOutlet weak var RLbl: UILabel!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var trailerButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var plyerView: UIView!
+    
+    
+    //MARK: - Variables
+    
+
+    
+    
+    
+    //MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupVideoPlayer()
-//        ApiClient.shared.getTvDetail(endPoint: "3") {
-//            switch $0 {
-//            case .failure(_):
-//                print("kaput :c")
-//            case let .success(Tv):
-//                let endpoint = "\(Tv.id ?? 0)/season/\(Tv.seasons.first?.seasonNumber ?? 0)"
+        ApiClient.shared.getTvDetail(endPoint: "3") {
+            switch $0 {
+            case .failure(_):
+                print("kaput :c")
+            case let .success(tvData):
+                let date = tvData.firstAirDate?.split(separator: "-")
+                DispatchQueue.main.async {
+                    
+                    self.nameLbl.text = tvData.networks.first?.name ?? ""
+                    self.yearLbl.text = String(date?[0] ?? "")
+                    self.RLbl.text = tvData.genres.first?.name ?? "R"
+                    self.setImage(imageView: self.coverImg, url: URL(string: ApiRoutes.imageBaseUrl+(tvData.posterPath ?? "/s22fRhj8xFPbiexrJwiAOcDEIrS.png"))!)
+                    
+                }
 //             ApiClient.shared.getSesoneDetail(endPoint:endpoint ) {
 //                switch $0 {
 //                case .failure(_):
@@ -30,19 +57,36 @@ class HomeViewController: BaseViewController {
 //                }
 //                 print(Tv.spokenLanguages.first?.iso6391 ?? "")
 //            }
-//        }
-//
-//
-//    }
-        videoPlayer.play(url: URL(string: ApiRoutes.sampleVideo)!)
+        }
+
+
+    }
+        
 
     }
     
     //MARK: - Functions
     
-    private func setupVideoPlayer() {
-        videoPlayer.add(to: self.view)
-    }
-
     
+    
+    //MARK: - IBAction
+    
+    
+    @IBAction func playAction(_ sender: Any) {
+        let vc = PlayerViewController(nibName: "PlayerViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func trailerAction(_ sender: Any) {
+        
+    }
+    @IBAction func watchListAction(_ sender: Any) {
+        
+    }
+    @IBAction func likeAction(_ sender: Any) {
+        
+    }
+    @IBAction func dontLikeAction(_ sender: Any) {
+        
+    }
 }

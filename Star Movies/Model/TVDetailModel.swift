@@ -34,6 +34,7 @@ struct TvDetailModel: Codable {
     let type: String?
     let voteAverage: Double?
     let voteCount: Int?
+    let posterPath: String?
     
 }
 

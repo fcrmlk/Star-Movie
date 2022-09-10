@@ -46,8 +46,8 @@ class BaseViewController: UIViewController {
         
     }
     
-    func setImage(imageView:UIImageView,url:URL,placeHolder : String = "loading")  {
-        imageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+    func setImage(imageView:UIImageView,url:URL,placeHolder : String = "COVER")  {
+        imageView.sd_imageIndicator = SDWebImageActivityIndicator.whiteLarge
         imageView.sd_imageIndicator?.startAnimatingIndicator()
         imageView.sd_setImage(with: url) { (img, err, cahce, URI) in
             imageView.sd_imageIndicator?.stopAnimatingIndicator()
