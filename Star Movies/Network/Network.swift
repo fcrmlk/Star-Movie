@@ -93,7 +93,9 @@ class ApiClient {
         let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
             Utility.hideLoading()
             guard error == nil
-            else { completion(.failure(.serverError)); return }
+            else {
+                completion(.failure(.serverError))
+                return }
             do {
                 guard let data = data else { completion(.failure(.serverError)); return }
                 let decoder = JSONDecoder()

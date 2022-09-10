@@ -15,6 +15,7 @@
 		180C2E3828CD424300CFCE96 /* EpisodesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C2E3628CD424300CFCE96 /* EpisodesTableViewCell.xib */; };
 		180C2E3C28CD426000CFCE96 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C2E3A28CD426000CFCE96 /* TitleCollectionViewCell.swift */; };
 		180C2E3D28CD426000CFCE96 /* TitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C2E3B28CD426000CFCE96 /* TitleCollectionViewCell.xib */; };
+		180C2E3F28CD58E000CFCE96 /* HomeExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C2E3E28CD58E000CFCE96 /* HomeExtention.swift */; };
 		180D563E28CD27A300D703A5 /* Star_Movies_Api_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D563D28CD27A300D703A5 /* Star_Movies_Api_Tests.swift */; };
 		180D564728CD3D9C00D703A5 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D564528CD3D9C00D703A5 /* PlayerViewController.swift */; };
 		180D564828CD3D9C00D703A5 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180D564628CD3D9C00D703A5 /* PlayerViewController.xib */; };
@@ -101,6 +102,7 @@
 		180C2E3628CD424300CFCE96 /* EpisodesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodesTableViewCell.xib; sourceTree = "<group>"; };
 		180C2E3A28CD426000CFCE96 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		180C2E3B28CD426000CFCE96 /* TitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionViewCell.xib; sourceTree = "<group>"; };
+		180C2E3E28CD58E000CFCE96 /* HomeExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExtention.swift; sourceTree = "<group>"; };
 		180D563B28CD27A300D703A5 /* Star Movies Api Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Star Movies Api Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180D563D28CD27A300D703A5 /* Star_Movies_Api_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star_Movies_Api_Tests.swift; sourceTree = "<group>"; };
 		180D564528CD3D9C00D703A5 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				180C2E3428CD422600CFCE96 /* Views */,
 				180BEDBB28CD15910065D238 /* HomeViewController.swift */,
 				180BEDBC28CD15910065D238 /* HomeViewController.xib */,
+				180C2E3E28CD58E000CFCE96 /* HomeExtention.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				18107A4828CD122C000C58A1 /* String.swift in Sources */,
 				181079EF28CCF035000C58A1 /* SeasoneModel.swift in Sources */,
 				181079F128CCF46B000C58A1 /* EpisodeDetailModal.swift in Sources */,
+				180C2E3F28CD58E000CFCE96 /* HomeExtention.swift in Sources */,
 				18107A4F28CD122C000C58A1 /* TimeInterval.swift in Sources */,
 				18107A5D28CD123A000C58A1 /* Global.swift in Sources */,
 			);

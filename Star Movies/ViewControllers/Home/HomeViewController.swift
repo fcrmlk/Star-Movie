@@ -22,11 +22,16 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var plyerView: UIView!
-    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     //MARK: - Variables
+    
+    
     var fetchedTvData : TvDetailModel?
-    var selectedIndex = 0
+    var sesoneData : SeasoneDetailModel?
+    var selectedIndex = -1
+    var tvID = 20
+    var rawPoster = "/s22fRhj8xFPbiexrJwiAOcDEIrS.png"
     
     
     
@@ -34,23 +39,7 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ApiClient.shared.getTvDetail(endPoint: "20") {
-            switch $0 {
-            case .failure(_):
-                print("kaput :c")
-            case let .success(tvData):
-                self.fetchedTvData = tvData
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                    self.collectionView.reloadData()
-                }
-                self.setupHomePage(tvData: tvData)
-            }
-            
-            
-        }
-        
-        
+        self.fetchTvDataApi()
     }
     
     //MARK: - Functions
@@ -61,22 +50,21 @@ class HomeViewController: BaseViewController {
             self.nameLbl.text = tvData.networks.first?.name ?? ""
             self.yearLbl.text = String(date?[0] ?? "")
             self.RLbl.text = tvData.genres.first?.name ?? "R"
-            self.setImage(imageView: self.coverImg, url: URL(string: ApiRoutes.imageBaseUrl+(tvData.posterPath ?? "/s22fRhj8xFPbiexrJwiAOcDEIrS.png"))!)
+            self.setImage(imageView: self.coverImg, url: URL(string: ApiRoutes.imageBaseUrl+(tvData.posterPath ?? self.rawPoster))!)
         }
-//        ApiClient.shared.getSesoneDetail(endPoint:endpoint ) {
-//            switch $0 {
-//            case .failure(_):
-//                print("kaput :c")
-//            case let .success(sesone):
-//                print(sesone.episodes)
-//            }
-//            print(Tv.spokenLanguages.first?.iso6391 ?? "")
-//        }
     }
     
     
     //MARK: - IBAction
     
+    @IBAction func searchAction(_ sender: Any) {
+        if Int(searchBar.text ?? "abc") != nil {
+            self.fetchTvDataApi()
+        }
+        else {
+            Utility.showErrorMessage(message: "Please enter in Digits")
+        }
+    }
     
     @IBAction func playAction(_ sender: Any) {
         let vc = PlayerViewController(nibName: "PlayerViewController", bundle: nil)
@@ -104,13 +92,12 @@ class HomeViewController: BaseViewController {
 extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.fetchedTvData?.seasons.count ?? 0
+        return self.sesoneData?.episodes?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.register(EpisodesTableViewCell.self, indexPath: indexPath)
-        let data = self.fetchedTvData?.seasons[indexPath.row]
-        cell.config(data: data)
+        cell.config(data: self.sesoneData,index:indexPath.row, image: self.fetchedTvData?.posterPath ?? rawPoster)
         cell.selectionStyle = .none
         return cell
         
@@ -159,9 +146,9 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
+        self.fetchSesonedataApi(index: indexPath.item)
         self.selectedIndex = indexPath.item
         self.collectionView.reloadData()
-        self.tableView.reloadData()
         
     }
 }

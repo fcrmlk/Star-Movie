@@ -24,9 +24,9 @@ class EpisodesTableViewCell: BaseTableViewCell {
     @IBAction func playButton(_ sender: Any) {
         
     }
-    func config(data:Season?) {
-        self.nameLbl.text = data?.name
-        self.setImage(imageView: imgView, url: ApiRoutes.imageBaseUrl + (data?.posterPath ?? "/s22fRhj8xFPbiexrJwiAOcDEIrS.png"))
+    func config(data:SeasoneDetailModel?,index:Int,image:String) {
+        self.nameLbl.text = data?.episodes?[index].name
+        self.setImage(imageView: imgView, url: ApiRoutes.imageBaseUrl + (data?.episodes?[index].stillPath ?? image))
     }
     
 }
