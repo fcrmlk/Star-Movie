@@ -37,7 +37,7 @@
                                     <action selector="playButtonMayBeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="s61-uH-hiU"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="COVER" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-KQ-0Lw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="COVER" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-KQ-0Lw">
                                 <rect key="frame" x="50" y="5" width="100" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="rZv-ju-ttb"/>
@@ -112,7 +112,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="COVER" width="816" height="431"/>
+        <image name="COVER" width="600" height="450"/>
         <image name="chevron.right.2" catalog="system" width="128" height="105"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <namedColor name="AppGray">

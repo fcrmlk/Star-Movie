@@ -56,9 +56,10 @@
 		18107A6D28CD1285000C58A1 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18107A6A28CD1285000C58A1 /* Utility.swift */; };
 		18107A6E28CD1285000C58A1 /* ImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18107A6B28CD1285000C58A1 /* ImagePickerVC.swift */; };
 		1893F53C28CD205D0075A1F4 /* StreamingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1893F53B28CD205D0075A1F4 /* StreamingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1893F53F28CD205D0075A1F4 /* Stream_Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1893F53928CD205D0075A1F4 /* Stream_Kit.framework */; };
-		1893F54028CD205D0075A1F4 /* Stream_Kit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1893F53928CD205D0075A1F4 /* Stream_Kit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1893F53F28CD205D0075A1F4 /* StreamingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1893F53928CD205D0075A1F4 /* StreamingKit.framework */; };
+		1893F54028CD205D0075A1F4 /* StreamingKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1893F53928CD205D0075A1F4 /* StreamingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1893F54628CD206B0075A1F4 /* StreamingVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893F54528CD206B0075A1F4 /* StreamingVideoPlayer.swift */; };
+		18DDC56A28CD824D0069DED5 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DDC56928CD824D0069DED5 /* NetworkExtension.framework */; };
 		799928422C347500516EF325 /* Pods_Star_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1314A443978628F7D7D9A4 /* Pods_Star_Movies.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +87,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1893F54028CD205D0075A1F4 /* Stream_Kit.framework in Embed Frameworks */,
+				1893F54028CD205D0075A1F4 /* StreamingKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,9 +146,11 @@
 		18107A6928CD1285000C58A1 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		18107A6A28CD1285000C58A1 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		18107A6B28CD1285000C58A1 /* ImagePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerVC.swift; sourceTree = "<group>"; };
-		1893F53928CD205D0075A1F4 /* Stream_Kit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stream_Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1893F53928CD205D0075A1F4 /* StreamingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StreamingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1893F53B28CD205D0075A1F4 /* StreamingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StreamingKit.h; sourceTree = "<group>"; };
 		1893F54528CD206B0075A1F4 /* StreamingVideoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingVideoPlayer.swift; sourceTree = "<group>"; };
+		18DDC56828CD824D0069DED5 /* Star Movies.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Star Movies.entitlements"; sourceTree = "<group>"; };
+		18DDC56928CD824D0069DED5 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		8E2AE6B6AA149DE91FBC9961 /* Pods-Star Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Star Movies.release.xcconfig"; path = "Target Support Files/Pods-Star Movies/Pods-Star Movies.release.xcconfig"; sourceTree = "<group>"; };
 		9A1314A443978628F7D7D9A4 /* Pods_Star_Movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Star_Movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56715C59900D604584D7BDE /* Pods-Star Movies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Star Movies.debug.xcconfig"; path = "Target Support Files/Pods-Star Movies/Pods-Star Movies.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,7 +168,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1893F53F28CD205D0075A1F4 /* Stream_Kit.framework in Frameworks */,
+				1893F53F28CD205D0075A1F4 /* StreamingKit.framework in Frameworks */,
+				18DDC56A28CD824D0069DED5 /* NetworkExtension.framework in Frameworks */,
 				799928422C347500516EF325 /* Pods_Star_Movies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				181079D128CCE3A8000C58A1 /* Star Movies.app */,
-				1893F53928CD205D0075A1F4 /* Stream_Kit.framework */,
+				1893F53928CD205D0075A1F4 /* StreamingKit.framework */,
 				180D563B28CD27A300D703A5 /* Star Movies Api Tests.xctest */,
 			);
 			name = Products;
@@ -274,6 +278,7 @@
 		181079D328CCE3A8000C58A1 /* Star Movies */ = {
 			isa = PBXGroup;
 			children = (
+				18DDC56828CD824D0069DED5 /* Star Movies.entitlements */,
 				181079D428CCE3A8000C58A1 /* AppDelegate.swift */,
 				180BEDBA28CD14130065D238 /* Base */,
 				181079F428CCFC8D000C58A1 /* Network */,
@@ -373,6 +378,7 @@
 		77B58108A2F054C303E0844E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18DDC56928CD824D0069DED5 /* NetworkExtension.framework */,
 				9A1314A443978628F7D7D9A4 /* Pods_Star_Movies.framework */,
 			);
 			name = Frameworks;
@@ -455,7 +461,7 @@
 			);
 			name = "Stream Kit";
 			productName = StreamingKit;
-			productReference = 1893F53928CD205D0075A1F4 /* Stream_Kit.framework */;
+			productReference = 1893F53928CD205D0075A1F4 /* StreamingKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -822,16 +828,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Star Movies/Star Movies.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XY338TPK8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Star Movies/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = STRAZ;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -853,16 +862,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Star Movies/Star Movies.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XY338TPK8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Star Movies/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = STRAZ;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -899,7 +911,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.standAlone.StreamingKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = StreamingKit;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -932,7 +944,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.standAlone.StreamingKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = StreamingKit;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

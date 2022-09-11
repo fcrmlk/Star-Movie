@@ -33,7 +33,7 @@ class HomeViewController: BaseViewController {
     var selectedIndex = 0
     var tvID = 20
     var rawPoster = "/s22fRhj8xFPbiexrJwiAOcDEIrS.png"
-    
+    var currentSesoneUrl = "\(20)/season/\(0)"
     
     
     //MARK: - LifeCycle
@@ -51,10 +51,17 @@ class HomeViewController: BaseViewController {
             self.nameLbl.text = tvData.originalName ?? "No Name"
             self.yearLbl.text = String(date?[0] ?? "")
             self.RLbl.text = tvData.genres.first?.name ?? "R"
-            self.descriptionLbl.text = tvData.overview ?? ""
+            self.descriptionLbl.text = tvData.name ?? ""
             self.setImage(imageView: self.coverImg, url: URL(string: ApiRoutes.imageBaseUrl+(tvData.posterPath ?? self.rawPoster))!)
         }
-        self.fetchSesonedataApi(index: 0)
+        if self.fetchedTvData?.seasons.first?.name == "Specials" {
+            
+            self.fetchSesonedataApi(index: 0)
+        }
+        else {
+            self.fetchSesonedataApi(index: 1)
+        }
+        
     }
     
     
@@ -62,6 +69,8 @@ class HomeViewController: BaseViewController {
     
     @IBAction func searchAction(_ sender: Any) {
         if let tvId = Int(searchBar.text ?? "abc") {
+            self.searchBar.text = ""
+            hideKeyboard()
             self.tvID = tvId
             self.fetchTvDataApi()
         }
@@ -71,7 +80,14 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func playAction(_ sender: Any) {
+        if self.fetchedTvData?.seasons.first?.name == "Specials" {
+            self.currentSesoneUrl = "\(tvID)/season/\(0)"
+        }
+        else {
+            self.currentSesoneUrl = "\(tvID)/season/\(1)"
+        }
         let vc = PlayerViewController(nibName: "PlayerViewController", bundle: nil)
+        vc.url = currentSesoneUrl
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -110,6 +126,8 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let vc = PlayerViewController(nibName: "PlayerViewController", bundle: nil)
+        vc.url = currentSesoneUrl+"/episode/\(indexPath.row + 1)"
+        vc.isEpisode = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -150,10 +168,22 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
-        self.fetchSesonedataApi(index: indexPath.item)
-        self.selectedIndex = indexPath.item + 1
+        self.selectedIndex = indexPath.item
+        if self.fetchedTvData?.seasons.first?.name == "Specials" {
+            self.currentSesoneUrl = "\(tvID)/season/\(indexPath.item)"
+            self.fetchSesonedataApi(index: indexPath.item)
+        }
+        else {
+            self.currentSesoneUrl = "\(tvID)/season/\(indexPath.item + 1)"
+            self.fetchSesonedataApi(index: indexPath.item + 1 )
+        }
         self.collectionView.reloadData()
         
+    }
+    
+    @objc func hideKeyboard()
+    {
+      UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 

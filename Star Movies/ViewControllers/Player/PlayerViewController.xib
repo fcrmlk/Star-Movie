@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerViewController" customModule="Star_Movies" customModuleProvider="target">
             <connections>
+                <outlet property="descriptionLBl" destination="qIW-pd-aY6" id="dp1-Pe-uRc"/>
+                <outlet property="nameLbl" destination="OEg-Au-X5l" id="TKv-aw-j49"/>
                 <outlet property="playerView" destination="eJW-nF-pcl" id="cA3-Fo-GUR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -44,23 +46,34 @@
                         <constraint firstAttribute="height" constant="230" id="DjA-QC-hzi"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IVw-CL-tf4">
-                    <rect key="frame" x="0.0" y="344" width="414" height="518"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qIW-pd-aY6" userLabel="Detail">
+                    <rect key="frame" x="20" y="374" width="374" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEg-Au-X5l" userLabel="Name">
+                    <rect key="frame" x="20" y="364" width="374" height="0.0"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eJW-nF-pcl" secondAttribute="trailing" id="3Uj-tu-pjd"/>
+                <constraint firstItem="qIW-pd-aY6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="66H-vk-3Hn"/>
                 <constraint firstItem="xKD-vw-hTC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="8Mr-hj-05c"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IVw-CL-tf4" secondAttribute="bottom" id="ADi-Ct-fgb"/>
-                <constraint firstItem="IVw-CL-tf4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NXd-GS-Sdd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qIW-pd-aY6" secondAttribute="bottom" constant="20" id="RIe-Rf-uHP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qIW-pd-aY6" secondAttribute="trailing" constant="20" id="SCc-c3-qSf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OEg-Au-X5l" secondAttribute="trailing" constant="20" id="XnT-nF-2nl"/>
+                <constraint firstItem="OEg-Au-X5l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cvi-tQ-LsG"/>
                 <constraint firstItem="eJW-nF-pcl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dnM-dc-xaX"/>
                 <constraint firstItem="eJW-nF-pcl" firstAttribute="top" secondItem="xKD-vw-hTC" secondAttribute="bottom" constant="20" id="qgO-r8-Uoc"/>
+                <constraint firstItem="OEg-Au-X5l" firstAttribute="top" secondItem="eJW-nF-pcl" secondAttribute="bottom" constant="20" id="rk2-47-chN"/>
                 <constraint firstItem="xKD-vw-hTC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="rr9-FV-gbU"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IVw-CL-tf4" secondAttribute="trailing" id="sKN-Zs-qah"/>
-                <constraint firstItem="IVw-CL-tf4" firstAttribute="top" secondItem="eJW-nF-pcl" secondAttribute="bottom" id="x1a-gq-1O2"/>
+                <constraint firstItem="qIW-pd-aY6" firstAttribute="top" secondItem="OEg-Au-X5l" secondAttribute="bottom" constant="10" id="zJN-1C-qLD"/>
             </constraints>
             <point key="canvasLocation" x="139" y="114"/>
         </view>

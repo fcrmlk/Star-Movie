@@ -19,10 +19,6 @@ extension HomeViewController {
             case let .success(tvData):
                 self.fetchedTvData = tvData
                 
-                if tvData.seasons.first?.name == "Specials" {
-                    self.fetchedTvData?.seasons.removeFirst()
-                }
-                
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }

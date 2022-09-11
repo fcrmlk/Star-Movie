@@ -13,5 +13,5 @@ struct EpisodeDetails: Codable {
     let id: Int?
     let productionCode: String?
     let seasonNumber: Int?
-    let voteAverage, voteCount: Int?
+    let voteAverage, voteCount: Double?
 }
