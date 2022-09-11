@@ -15,4 +15,11 @@ class DataManager {
     
     //MARK: - Users Data
     
+    func setID(value: Int) {
+        UserDefaults.standard.set(value, forKey: "tvID")
+    }
+    
+    func getID() -> Int {
+        return UserDefaults.standard.integer(forKey: "tvID")
+    }
 }

@@ -19,6 +19,7 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var RLbl: UILabel!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var trailerButton: UIButton!
+    @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var plyerView: UIView!
@@ -29,7 +30,7 @@ class HomeViewController: BaseViewController {
     
     var fetchedTvData : TvDetailModel?
     var sesoneData : SeasoneDetailModel?
-    var selectedIndex = -1
+    var selectedIndex = 0
     var tvID = 20
     var rawPoster = "/s22fRhj8xFPbiexrJwiAOcDEIrS.png"
     
@@ -47,18 +48,21 @@ class HomeViewController: BaseViewController {
     func setupHomePage(tvData:TvDetailModel) {
         let date = tvData.firstAirDate?.split(separator: "-")
         DispatchQueue.main.async {
-            self.nameLbl.text = tvData.networks.first?.name ?? ""
+            self.nameLbl.text = tvData.originalName ?? "No Name"
             self.yearLbl.text = String(date?[0] ?? "")
             self.RLbl.text = tvData.genres.first?.name ?? "R"
+            self.descriptionLbl.text = tvData.overview ?? ""
             self.setImage(imageView: self.coverImg, url: URL(string: ApiRoutes.imageBaseUrl+(tvData.posterPath ?? self.rawPoster))!)
         }
+        self.fetchSesonedataApi(index: 0)
     }
     
     
     //MARK: - IBAction
     
     @IBAction func searchAction(_ sender: Any) {
-        if Int(searchBar.text ?? "abc") != nil {
+        if let tvId = Int(searchBar.text ?? "abc") {
+            self.tvID = tvId
             self.fetchTvDataApi()
         }
         else {
@@ -147,7 +151,7 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
         self.fetchSesonedataApi(index: indexPath.item)
-        self.selectedIndex = indexPath.item
+        self.selectedIndex = indexPath.item + 1
         self.collectionView.reloadData()
         
     }

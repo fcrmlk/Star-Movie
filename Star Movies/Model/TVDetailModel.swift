@@ -27,7 +27,7 @@ struct TvDetailModel: Codable {
     let originCountry: [String]
     let originalLanguage, originalName, overview: String?
     let popularity: Double?
-    let seasons: [Season]
+    var seasons: [Season]
     let spokenLanguages: [SpokenLanguage]
     let status : String?
     let tagline:String?
